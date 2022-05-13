@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/drawable/my_button.xml" value="0.2703125" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/layout/activity_team_creation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/layout/fragment_pokemon_selection.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
