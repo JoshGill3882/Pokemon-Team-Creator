@@ -16,13 +16,13 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 public class Pokemon {
-    private final Integer nationalDexNumber;
+    private final int nationalDexNumber;
     private String name;
-    private final Type[] types = new Type[2];
+    private Type[] types = new Type[2];
     private final ArrayList<String> abilities = new ArrayList<>();
     private String imageURL;
 
-    public Pokemon(Integer number) {
+    public Pokemon(int number) {
         this.nationalDexNumber = number;
         // Create a string with the correct get URL
         String pokemonGetURL = "https://pokeapi.co/api/v2/pokemon/" + this.nationalDexNumber;
@@ -83,7 +83,15 @@ public class Pokemon {
         requestQueue.add(pokemonGetRequest);
     }
 
-    public Integer getNationalDexNumber() {
+    public Pokemon(int aDexNum, String aName, Type[] aTypes, String anAbility, String anImageURL) {
+        this.nationalDexNumber = aDexNum;
+        this.name = aName;
+        this.types = aTypes;
+        this.abilities.add(anAbility);
+        this.imageURL = anImageURL;
+    }
+
+    public int getNationalDexNumber() {
         return nationalDexNumber;
     }
     public String getName() {
