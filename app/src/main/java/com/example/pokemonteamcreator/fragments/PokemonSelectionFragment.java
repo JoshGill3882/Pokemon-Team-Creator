@@ -7,8 +7,10 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,9 @@ import com.example.pokemonteamcreator.R;
 import com.example.pokemonteamcreator.data.Pokemon;
 import com.squareup.picasso.Picasso;
 
+import org.apache.commons.lang3.text.WordUtils;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PokemonSelectionFragment extends Fragment {
@@ -57,6 +62,21 @@ public class PokemonSelectionFragment extends Fragment {
 
                             ImageView imageView = view1.findViewById(R.id.fragmentPokemonImage);
                             Picasso.get().load(pokemonSelected.getImageURL()).into(imageView);
+
+                            Spinner abilitySelectSpinner = view1.findViewById(R.id.fragmentPokemonAbilitySpinner);
+                            ArrayAdapter<String> abilityAdapter = new ArrayAdapter<>(
+                                    view1.getContext(),
+                                    android.R.layout.simple_spinner_item
+                            );
+                            abilityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                            for (String ability: pokemonSelected.getAbilities()) {
+                                abilityAdapter.add(
+                                        WordUtils.capitalize(
+                                                ability.replaceAll("-", " ")
+                                        )
+                                );
+                            }
+                            abilitySelectSpinner.setAdapter(abilityAdapter);
                         }
 
                         return true;

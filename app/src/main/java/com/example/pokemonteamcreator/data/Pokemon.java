@@ -13,11 +13,13 @@ import com.example.pokemonteamcreator.TeamCreationActivity;
 
 import org.json.JSONException;
 
+import java.util.ArrayList;
+
 public class Pokemon {
     private final Integer nationalDexNumber;
     private String name;
     private final Type[] types = new Type[2];
-    private final String[] abilities = new String[3];
+    private final ArrayList<String> abilities = new ArrayList<>();
     private String imageURL;
 
     public Pokemon(Integer number) {
@@ -50,11 +52,13 @@ public class Pokemon {
                         }
                         // Get the abilities of the pokemon
                         for (int i = 0; i < response.getJSONArray("abilities").length(); i++) {
-                            abilities[i] = response
-                                    .getJSONArray("abilities")
-                                    .getJSONObject(i)
-                                    .getJSONObject("ability")
-                                    .getString("name");
+                            abilities.add(
+                                    response
+                                            .getJSONArray("abilities")
+                                            .getJSONObject(i)
+                                            .getJSONObject("ability")
+                                            .getString("name")
+                            );
                         }
                         // Get the image for the pokemon
                         imageURL = response
@@ -88,7 +92,7 @@ public class Pokemon {
     public Type[] getTypes() {
         return types;
     }
-    public String[] getAbilities() {
+    public ArrayList<String> getAbilities() {
         return abilities;
     }
     public String getImageURL() {
