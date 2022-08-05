@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">PTC</string>
+    <string name="app_name_full">POKEMON TEAM CREATOR</string>
+    <string name="activityMainDisplayText">CHOOSE A GAME GROUP FROM BELOW TO START</string>
+    <string name="redAndBlue">Red and Blue</string>
+    <string name="yellow">Yellow</string>
+    <string name="goldAndSilver">Gold and Silver</string>
+    <string name="crystal">Crystal</string>
+    <string name="emerald">Emerald</string>
+    <string name="rubyAndSapphire">Ruby and Sapphire</string>
+    <string name="diamondAndPearl">Diamond and Pearl</string>
+    <string name="platinum">Platinum</string>
+    <string name="black2AndWhite2">Black 2 and White 2</string>
+    <string name="blackAndWhite">Black and White</string>
+    <string name="xAndY">X and Y</string>
+    <string name="swordAndShield">Sword and Shield</string>
+    <string name="ultraSunAndUltraMoon">Ultra Sun and Ultra Moon</string>
+    <string name="sunAndMoon">Sun and Moon</string>
+    <string name="omegaRubyAndAlphaSapphire">Omega Ruby and Alpha Sapphire</string>
+    <string name="pokemonName">Pokemon Name</string>
+
+    <!-- Pokemon Types -->
+    <string name="normal">NORMAL</string>
+    <string name="fire">FIRE</string>
+    <string name="fighting">FIGHTING</string>
+    <string name="water">WATER</string>
+    <string name="flying">FLYING</string>
+    <string name="grass">GRASS</string>
+    <string name="poison">POISON</string>
+    <string name="electric">ELECTRIC</string>
+    <string name="ground">GROUND</string>
+    <string name="psychic">PSYCHIC</string>
+    <string name="rock">ROCK</string>
+    <string name="ice">ICE</string>
+    <string name="bug">BUG</string>
+    <string name="dragon">DRAGON</string>
+    <string name="ghost">GHOST</string>
+    <string name="dark">DARK</string>
+    <string name="steel">STEEL</string>
+    <string name="fairy">FAIRY</string>
+    <string name="nationalDex">National Dex</string>
+</resources>

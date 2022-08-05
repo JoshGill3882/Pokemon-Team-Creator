@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/activityMainNationalDexButton"
+            android:layout_width="225dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/nationalDex"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainSwordShieldButton"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainOmegaRubyAlphaSapphireButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/omegaRubyAndAlphaSapphire"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainBlackWhiteButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainSwordShieldButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/swordAndShield"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainSunMoonButton"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainUltraSunUltraMoonButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/ultraSunAndUltraMoon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainOmegaRubyAlphaSapphireButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainSunMoonButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/sunAndMoon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainOmegaRubyAlphaSapphireButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainBlack2White2Button"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/black2AndWhite2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainPlatinumButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainBlackWhiteButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/blackAndWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainDiamondPearlButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainRubySapphireButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/rubyAndSapphire"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainGoldSilverButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainEmeraldButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/emerald"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainCrystalButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainDiamondPearlButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/diamondAndPearl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainRubySapphireButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainPlatinumButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/platinum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainEmeraldButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainGoldSilverButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/goldAndSilver"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainRedBlueButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainCrystalButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/crystal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainYellowButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityMainYellowButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainText"
+            tools:ignore="UsingOnClickInXml" />
+
+        <TextView
+            android:id="@+id/activityMainHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/app_name_full"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/activityMainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/activityMainDisplayText"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainHeading" />
+
+        <Button
+            android:id="@+id/activityMainRedBlueButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/redAndBlue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityMainText"
+            tools:ignore="TextContrastCheck,UsingOnClickInXml" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
