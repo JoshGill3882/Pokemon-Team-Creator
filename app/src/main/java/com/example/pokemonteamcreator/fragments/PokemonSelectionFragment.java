@@ -7,8 +7,11 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,9 +21,12 @@ import com.example.pokemonteamcreator.R;
 import com.example.pokemonteamcreator.data.Pokemon;
 import com.squareup.picasso.Picasso;
 
+import java.sql.Array;
 import java.util.Arrays;
 
-public class PokemonSelectionFragment extends Fragment {
+public class PokemonSelectionFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+
+    private Pokemon pokemonSelected;
 
     public PokemonSelectionFragment() {}
 
@@ -34,7 +40,7 @@ public class PokemonSelectionFragment extends Fragment {
         editText.setOnKeyListener(
                 (view, keyCode, keyEvent) -> {
                     if ((keyEvent.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                        Pokemon pokemonSelected = selectPokemon(editText.getText().toString().toLowerCase());
+                        pokemonSelected = selectPokemon(editText.getText().toString().toLowerCase());
 
                         if (pokemonSelected == null) {
                             Toast.makeText(getContext(), "Pokemon not found", Toast.LENGTH_LONG).show();
@@ -42,6 +48,7 @@ public class PokemonSelectionFragment extends Fragment {
                             System.out.println(pokemonSelected.getName());
                             System.out.println(Arrays.toString(pokemonSelected.getTypes()));
                             System.out.println(pokemonSelected.getImageURL());
+                            System.out.println(pokemonSelected.getAbilities().size());
 
                             String displayName =
                                     pokemonSelected.getName().substring(0,1).toUpperCase()
@@ -57,6 +64,14 @@ public class PokemonSelectionFragment extends Fragment {
 
                             ImageView imageView = view1.findViewById(R.id.fragmentPokemonImage);
                             Picasso.get().load(pokemonSelected.getImageURL()).into(imageView);
+
+                            Spinner abilitySpinner = (Spinner) view1.findViewById(R.id.fragmentAbilitySpinner);
+                            ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                                    getActivity(),
+                                    android.R.layout.simple_spinner_dropdown_item,
+                                    pokemonSelected.getAbilities()
+                            );
+                            abilitySpinner.setAdapter(adapter);
                         }
 
                         return true;
@@ -66,5 +81,18 @@ public class PokemonSelectionFragment extends Fragment {
         );
 
         return view1;
+    }
+
+    public Pokemon getPokemonSelected() {
+        return pokemonSelected;
+    }
+
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        pokemonSelected.setChosenAbility((String) parent.getItemAtPosition(pos));
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
