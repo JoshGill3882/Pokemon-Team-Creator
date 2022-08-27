@@ -24,7 +24,7 @@ import com.squareup.picasso.Picasso;
 import java.sql.Array;
 import java.util.Arrays;
 
-public class PokemonSelectionFragment extends Fragment {
+public class PokemonSelectionFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private Pokemon pokemonSelected;
 
@@ -85,5 +85,14 @@ public class PokemonSelectionFragment extends Fragment {
 
     public Pokemon getPokemonSelected() {
         return pokemonSelected;
+    }
+
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        pokemonSelected.setChosenAbility((String) parent.getItemAtPosition(pos));
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
