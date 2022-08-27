@@ -11,13 +11,17 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.pokemonteamcreator.MainActivity;
 import com.example.pokemonteamcreator.TeamCreationActivity;
 
+import org.apache.commons.lang3.text.WordUtils;
 import org.json.JSONException;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Pokemon {
     private final Integer nationalDexNumber;
     private String name;
     private final Type[] types = new Type[2];
-    private final String[] abilities = new String[3];
+    private final ArrayList<String> abilities = new ArrayList<>();
     private String chosenAbility;
     private String imageURL;
 
@@ -51,11 +55,16 @@ public class Pokemon {
                         }
                         // Get the abilities of the pokemon
                         for (int i = 0; i < response.getJSONArray("abilities").length(); i++) {
-                            abilities[i] = response
-                                    .getJSONArray("abilities")
-                                    .getJSONObject(i)
-                                    .getJSONObject("ability")
-                                    .getString("name");
+                            abilities.add(
+                                    WordUtils.capitalize(
+                                            response
+                                                    .getJSONArray("abilities")
+                                                    .getJSONObject(i)
+                                                    .getJSONObject("ability")
+                                                    .getString("name")
+                                                    .replace("-", " ")
+                                )
+                            );
                         }
                         // Get the image for the pokemon
                         imageURL = response
@@ -89,7 +98,7 @@ public class Pokemon {
     public Type[] getTypes() {
         return types;
     }
-    public String[] getAbilities() {
+    public ArrayList<String> getAbilities() {
         return abilities;
     }
     public String getChosenAbility() {
