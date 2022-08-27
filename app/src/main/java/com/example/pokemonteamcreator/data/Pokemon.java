@@ -18,6 +18,7 @@ public class Pokemon {
     private String name;
     private final Type[] types = new Type[2];
     private final String[] abilities = new String[3];
+    private String chosenAbility;
     private String imageURL;
 
     public Pokemon(Integer number) {
@@ -91,7 +92,14 @@ public class Pokemon {
     public String[] getAbilities() {
         return abilities;
     }
+    public String getChosenAbility() {
+        return chosenAbility;
+    }
     public String getImageURL() {
         return imageURL;
+    }
+
+    public void setChosenAbility(String chosenAbility) {
+        this.chosenAbility = chosenAbility;
     }
 }
