@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/drawable/my_button.xml" value="0.2703125" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/layout/activity_team_creation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/c2038058/OneDrive - Cardiff University/Desktop/Year 2/Spring Semester/Mobile Applications/Coursework Project/Pokemon Team Creator (new)/4 - application/app/src/main/res/layout/fragment_pokemon_selection.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/joshg/Desktop/Coding/Projects/Pokemon Team Creator/app/src/main/res/drawable/my_button.xml" value="0.2265" />
+        <entry key="..\:/Users/joshg/Desktop/Coding/Projects/Pokemon Team Creator/app/src/main/res/layout/fragment_pokemon_selection.xml" value="0.6" />
       </map>
     </option>
   </component>
