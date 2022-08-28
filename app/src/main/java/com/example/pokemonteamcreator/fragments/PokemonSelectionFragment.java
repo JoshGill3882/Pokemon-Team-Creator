@@ -56,10 +56,10 @@ public class PokemonSelectionFragment extends Fragment {
                             editText.setText(displayName);
 
                             TextView typeText1 = view1.findViewById(R.id.fragmentTypeText1);
-                            typeText1.setText(pokemonSelected.getTypes()[0].name());
+                            typeText1.setText(pokemonSelected.getTypes()[0]);
                             if (pokemonSelected.getTypes()[1] != null) {
                                 TextView typeText2 = view1.findViewById(R.id.fragmentTypeText2);
-                                typeText2.setText(pokemonSelected.getTypes()[1].name());
+                                typeText2.setText(pokemonSelected.getTypes()[1]);
                             }
 
                             ImageView imageView = view1.findViewById(R.id.fragmentPokemonImage);

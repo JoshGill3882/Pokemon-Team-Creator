@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class Pokemon {
     private final Integer nationalDexNumber;
     private String name;
-    private final Type[] types = new Type[2];
+    private final String[] types = new String[2];
     private final ArrayList<String> abilities = new ArrayList<>();
     private String chosenAbility;
     private String imageURL;
@@ -44,14 +44,12 @@ public class Pokemon {
                         name = response.getJSONObject("species").getString("name");
                         // Get the types of the pokemon
                         for (int i = 0; i < response.getJSONArray("types").length(); i++) {
-                            types[i] = Type.valueOf(
-                                    response
-                                            .getJSONArray("types")
-                                            .getJSONObject(i)
-                                            .getJSONObject("type")
-                                            .getString("name")
-                                            .toUpperCase()
-                            );
+                            types[i] = response
+                                    .getJSONArray("types")
+                                    .getJSONObject(i)
+                                    .getJSONObject("type")
+                                    .getString("name")
+                                    .toUpperCase();
                         }
                         // Get the abilities of the pokemon
                         for (int i = 0; i < response.getJSONArray("abilities").length(); i++) {
@@ -95,7 +93,7 @@ public class Pokemon {
     public String getName() {
         return name;
     }
-    public Type[] getTypes() {
+    public String[] getTypes() {
         return types;
     }
     public ArrayList<String> getAbilities() {
