@@ -4,17 +4,12 @@ import static com.example.pokemonteamcreator.MainActivity.launchTeamSelector;
 import static com.example.pokemonteamcreator.MainActivity.numOfRequests;
 import static com.example.pokemonteamcreator.MainActivity.requestQueue;
 
-import android.content.Intent;
-
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.pokemonteamcreator.MainActivity;
-import com.example.pokemonteamcreator.TeamCreationActivity;
 
 import org.apache.commons.lang3.text.WordUtils;
 import org.json.JSONException;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Pokemon {

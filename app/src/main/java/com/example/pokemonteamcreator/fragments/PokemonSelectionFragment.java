@@ -21,7 +21,6 @@ import com.example.pokemonteamcreator.R;
 import com.example.pokemonteamcreator.data.Pokemon;
 import com.squareup.picasso.Picasso;
 
-import java.sql.Array;
 import java.util.Arrays;
 
 public class PokemonSelectionFragment extends Fragment {
