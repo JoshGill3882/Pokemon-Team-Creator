@@ -24,7 +24,7 @@ import com.squareup.picasso.Picasso;
 import java.sql.Array;
 import java.util.Arrays;
 
-public class PokemonSelectionFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+public class PokemonSelectionFragment extends Fragment {
 
     private Pokemon pokemonSelected;
 
@@ -66,6 +66,20 @@ public class PokemonSelectionFragment extends Fragment implements AdapterView.On
                             Picasso.get().load(pokemonSelected.getImageURL()).into(imageView);
 
                             Spinner abilitySpinner = (Spinner) view1.findViewById(R.id.fragmentAbilitySpinner);
+                            abilitySpinner.setOnItemSelectedListener(
+                                    new AdapterView.OnItemSelectedListener() {
+                                            @Override
+                                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                pokemonSelected.setChosenAbility((String) adapterView.getItemAtPosition(i));
+                                                System.out.println(pokemonSelected.getChosenAbility());
+                                            }
+
+                                            @Override
+                                            public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                            }
+                                    }
+                            );
                             ArrayAdapter<String> adapter = new ArrayAdapter<>(
                                     getActivity(),
                                     android.R.layout.simple_spinner_dropdown_item,
@@ -85,14 +99,5 @@ public class PokemonSelectionFragment extends Fragment implements AdapterView.On
 
     public Pokemon getPokemonSelected() {
         return pokemonSelected;
-    }
-
-    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-        pokemonSelected.setChosenAbility((String) parent.getItemAtPosition(pos));
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
     }
 }
