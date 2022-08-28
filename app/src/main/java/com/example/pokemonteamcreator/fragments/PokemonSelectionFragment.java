@@ -45,7 +45,7 @@ public class PokemonSelectionFragment extends Fragment {
                             Toast.makeText(getContext(), "Pokemon not found", Toast.LENGTH_LONG).show();
                         } else {
                             System.out.println(pokemonSelected.getName());
-                            System.out.println(Arrays.toString(pokemonSelected.getTypes()));
+                            System.out.println(pokemonSelected.getTypes());
                             System.out.println(pokemonSelected.getImageURL());
                             System.out.println(pokemonSelected.getAbilities().size());
 
@@ -55,10 +55,11 @@ public class PokemonSelectionFragment extends Fragment {
                             editText.setText(displayName);
 
                             TextView typeText1 = view1.findViewById(R.id.fragmentTypeText1);
-                            typeText1.setText(pokemonSelected.getTypes()[0]);
-                            if (pokemonSelected.getTypes()[1] != null) {
+                            String[] types = pokemonSelected.getTypes().split(",");
+                            typeText1.setText(types[0]);
+                            if (types.length != 1) {
                                 TextView typeText2 = view1.findViewById(R.id.fragmentTypeText2);
-                                typeText2.setText(pokemonSelected.getTypes()[1]);
+                                typeText2.setText(types[1]);
                             }
 
                             ImageView imageView = view1.findViewById(R.id.fragmentPokemonImage);

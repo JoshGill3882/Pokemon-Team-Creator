@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Pokemon {
     private final Integer nationalDexNumber;
     private String name;
-    private final String[] types = new String[2];
+    private String types = "";
     private final ArrayList<String> abilities = new ArrayList<>();
     private String chosenAbility;
     private String imageURL;
@@ -39,13 +39,16 @@ public class Pokemon {
                         name = response.getJSONObject("species").getString("name");
                         // Get the types of the pokemon
                         for (int i = 0; i < response.getJSONArray("types").length(); i++) {
-                            types[i] = response
+                            types += response
                                     .getJSONArray("types")
                                     .getJSONObject(i)
                                     .getJSONObject("type")
                                     .getString("name")
                                     .toUpperCase();
+                            types += ",";
                         }
+                        // Remove the last comma from the String
+                        types = types.substring(0, (types.length() - 1));
                         // Get the abilities of the pokemon
                         for (int i = 0; i < response.getJSONArray("abilities").length(); i++) {
                             abilities.add(
@@ -88,7 +91,7 @@ public class Pokemon {
     public String getName() {
         return name;
     }
-    public String[] getTypes() {
+    public String getTypes() {
         return types;
     }
     public ArrayList<String> getAbilities() {
