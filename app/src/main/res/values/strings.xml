@@ -39,4 +39,6 @@
     <string name="steel">STEEL</string>
     <string name="fairy">FAIRY</string>
     <string name="nationalDex">National Dex</string>
+    <string name="teamName">Team Name</string>
+    <string name="saveTeam">SAVE TEAM</string>
 </resources>
