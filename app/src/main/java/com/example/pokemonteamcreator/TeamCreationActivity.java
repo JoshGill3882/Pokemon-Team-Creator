@@ -1,5 +1,8 @@
 package com.example.pokemonteamcreator;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentContainerView;
 
 import com.example.pokemonteamcreator.data.Pokemon;
+import com.example.pokemonteamcreator.data.Team;
 import com.example.pokemonteamcreator.fragments.PokemonSelectionFragment;
+import com.google.gson.Gson;
+
+import java.util.Arrays;
 
 public class TeamCreationActivity extends AppCompatActivity {
 
@@ -20,6 +27,7 @@ public class TeamCreationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_team_creation);
     }
 
+    @SuppressLint("MutatingSharedPrefs")
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void saveTeamButton(View view) {
         EditText teamNameEntry = findViewById(R.id.teamCreationTeamNameEntry);
@@ -62,5 +70,14 @@ public class TeamCreationActivity extends AppCompatActivity {
         if (psv.getPokemonSelected() != null) {
             pokemon[5] = psv.getPokemonSelected();
         }
+
+        Team team = new Team(teamName, pokemon);
+        // GSON Usage found at - https://stackoverflow.com/questions/7145606/how-do-you-save-store-objects-in-sharedpreferences-on-android
+        Gson gson = new Gson();
+        String json = gson.toJson(team);
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
+        sharedPrefEditor.putString(teamName, json).apply();
     }
 }
