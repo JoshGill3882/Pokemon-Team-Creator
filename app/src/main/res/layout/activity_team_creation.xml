@@ -20,7 +20,7 @@
             android:layout_marginTop="18dp"
             android:layout_marginBottom="36dp"
             android:text="@string/saveTeam"
-            android:textSize="15sp"
+            android:textSize="17sp"
             android:background="@drawable/my_button"
             android:onClick="saveTeamButton"
             app:layout_constraintTop_toBottomOf="@id/fragmentPokemonSelection6"
@@ -28,6 +28,16 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="UsingOnClickInXml" />
+
+        <TextView
+            android:id="@+id/teamCreationPokemonErrorDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@+id/teamCreationSaveTeamButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
 
         <EditText
@@ -41,6 +51,16 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             tools:ignore="Autofill,LabelFor,TextFields" />
+
+        <TextView
+            android:id="@+id/teamCreationTeamNameErrorDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@+id/teamCreationTeamNameEntry"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentPokemonSelection6"

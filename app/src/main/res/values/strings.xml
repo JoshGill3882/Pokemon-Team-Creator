@@ -41,4 +41,6 @@
     <string name="nationalDex">National Dex</string>
     <string name="teamName">Team Name</string>
     <string name="saveTeam">SAVE TEAM</string>
+    <string name="teamNameErrorMessage">ERROR: NO TEAM NAME</string>
+    <string name="noPokemonErrorMessage">ERROR: NO POKEMON ON TEAM</string>
 </resources>
