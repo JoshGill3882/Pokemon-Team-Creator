@@ -17,8 +17,6 @@ import com.example.pokemonteamcreator.data.Team;
 import com.example.pokemonteamcreator.fragments.PokemonSelectionFragment;
 import com.google.gson.Gson;
 
-import java.util.Arrays;
-
 public class TeamCreationActivity extends AppCompatActivity {
 
     @Override
