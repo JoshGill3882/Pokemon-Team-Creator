@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PokedexSelectionActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/activityPokedexSelectionNationalDexButton"
+            android:layout_width="225dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/nationalDex"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionSwordShieldButton"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionOmegaRubyAlphaSapphireButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/omegaRubyAndAlphaSapphire"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionBlackWhiteButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionSwordShieldButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/swordAndShield"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionSunMoonButton"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionUltraSunUltraMoonButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/ultraSunAndUltraMoon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionOmegaRubyAlphaSapphireButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionSunMoonButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/sunAndMoon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionOmegaRubyAlphaSapphireButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionBlack2White2Button"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/black2AndWhite2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionPlatinumButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionBlackWhiteButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/blackAndWhite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionDiamondPearlButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionRubySapphireButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/rubyAndSapphire"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionGoldSilverButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionEmeraldButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/emerald"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionCrystalButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionDiamondPearlButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/diamondAndPearl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionRubySapphireButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionPlatinumButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/platinum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionEmeraldButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionGoldSilverButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/goldAndSilver"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionRedBlueButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionCrystalButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/crystal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionYellowButton"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionYellowButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionText"
+            tools:ignore="UsingOnClickInXml" />
+
+        <TextView
+            android:id="@+id/activityPokedexSelectionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/activityPokedexSelectionDisplayText"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/activityPokedexSelectionRedBlueButton"
+            android:layout_width="160dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/my_button"
+            android:onClick="buttonPress"
+            android:text="@string/redAndBlue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityPokedexSelectionText"
+            tools:ignore="TextContrastCheck,UsingOnClickInXml" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

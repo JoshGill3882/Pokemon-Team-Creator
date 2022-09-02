@@ -1,6 +1,6 @@
 package com.example.pokemonteamcreator.fragments;
 
-import static com.example.pokemonteamcreator.MainActivity.selectPokemon;
+import static com.example.pokemonteamcreator.PokedexSelectionActivity.selectPokemon;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -20,8 +20,6 @@ import androidx.fragment.app.Fragment;
 import com.example.pokemonteamcreator.R;
 import com.example.pokemonteamcreator.data.Pokemon;
 import com.squareup.picasso.Picasso;
-
-import java.util.Arrays;
 
 public class PokemonSelectionFragment extends Fragment {
 
