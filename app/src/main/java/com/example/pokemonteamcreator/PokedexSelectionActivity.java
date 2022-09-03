@@ -144,10 +144,7 @@ public class PokedexSelectionActivity extends AppCompatActivity {
     public static void launchTeamSelector() {
         // Alert the user that the pokedex is complete
         Toast.makeText(context, "POKEDEX COMPLETE", Toast.LENGTH_LONG).show();
-        // Create an intent for changing activity
-        Intent redirect = new Intent(context, TeamCreationActivity.class);
-        // Start the new activity
-        context.startActivity(redirect);
+        context.startActivity(new Intent(context, TeamCreationActivity.class));
     }
 
     // Method for selecting a given pokemon (by name) from the ArrayList

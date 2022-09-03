@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public static RequestQueue requestQueue;
     @SuppressLint("StaticFieldLeak")
     public static Context context;
+    public static SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +24,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         context = this;
         requestQueue = Volley.newRequestQueue(context);
+        sharedPref = getPreferences(Context.MODE_PRIVATE);
     }
 
     public void pokedexSelectorActivityLaunch(View view) {
-        Intent pokedexSelectionRedirect = new Intent(context, PokedexSelectionActivity.class);
-        context.startActivity(pokedexSelectionRedirect);
+        context.startActivity(new Intent(context, PokedexSelectionActivity.class));
     }
 
     public void teamSelectionActivityLaunch(View view) {
-        Intent teamSelectionRedirect = new Intent(context, TeamSelectionActivity.class);
-        context.startActivity(teamSelectionRedirect);
+        context.startActivity(new Intent(context, TeamSelectionActivity.class));
     }
 }

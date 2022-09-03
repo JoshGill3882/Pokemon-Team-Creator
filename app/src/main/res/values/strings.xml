@@ -45,4 +45,5 @@
     <string name="noPokemonErrorMessage">ERROR: NO POKEMON ON TEAM</string>
     <string name="pokedexSelection">POKEDEX SELECTION</string>
     <string name="teamSelection">TEAM SELECTION</string>
+    <string name="teamSelectionText">PLEASE SELECT A TEAM TO VIEW</string>
 </resources>

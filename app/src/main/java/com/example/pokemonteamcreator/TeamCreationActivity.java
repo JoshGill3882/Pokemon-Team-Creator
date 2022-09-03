@@ -1,7 +1,11 @@
 package com.example.pokemonteamcreator;
 
+import static com.example.pokemonteamcreator.MainActivity.context;
+import static com.example.pokemonteamcreator.MainActivity.sharedPref;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
@@ -94,9 +98,21 @@ public class TeamCreationActivity extends AppCompatActivity {
         // GSON Usage found at - https://stackoverflow.com/questions/7145606/how-do-you-save-store-objects-in-sharedpreferences-on-android
         Gson gson = new Gson();
         String json = gson.toJson(team);
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
 
         SharedPreferences.Editor sharedPrefEditor = sharedPref.edit();
         sharedPrefEditor.putString(teamName, json).apply();
+
+        String teamNames = "";
+        if (!sharedPref.contains("teamNames")) {
+            teamNames += teamName;
+        } else {
+            teamNames = sharedPref.getString("teamNames", null);
+            teamNames += ", " + teamName;
+        }
+        sharedPrefEditor.putString("teamNames", teamNames).apply();
+
+        System.out.println(sharedPref.getString("teamNames", null));
+
+        startActivity(new Intent(context, TeamSelectionActivity.class));
     }
 }
