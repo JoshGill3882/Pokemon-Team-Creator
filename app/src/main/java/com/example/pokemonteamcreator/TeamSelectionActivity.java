@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class TeamSelectionActivity extends AppCompatActivity {
 
@@ -18,6 +19,8 @@ public class TeamSelectionActivity extends AppCompatActivity {
         String teamNames = sharedPref.getString("teamNames", null);
         if (teamNames == null) {
             System.out.println("No Teams Present in Shared Preferences");
+            TextView topTextView = findViewById(R.id.teamSelectionText);
+            topTextView.setText(R.string.teamSelectionErrorText);
         } else {
             String[] teamNamesArray = teamNames.split(",");
             System.out.println(teamNames);

@@ -46,4 +46,6 @@
     <string name="pokedexSelection">POKEDEX SELECTION</string>
     <string name="teamSelection">TEAM SELECTION</string>
     <string name="teamSelectionText">PLEASE SELECT A TEAM TO VIEW</string>
+    <string name="teamSelectionButton">POKEDEX SELECTION</string>
+    <string name="teamSelectionErrorText">No Teams Created, please make one</string>
 </resources>
