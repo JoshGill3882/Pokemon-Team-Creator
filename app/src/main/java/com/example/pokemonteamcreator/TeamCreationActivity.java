@@ -2,6 +2,7 @@ package com.example.pokemonteamcreator;
 
 import static com.example.pokemonteamcreator.MainActivity.context;
 import static com.example.pokemonteamcreator.MainActivity.sharedPref;
+import static com.example.pokemonteamcreator.PokedexSelectionActivity.pokedexString;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -94,7 +95,7 @@ public class TeamCreationActivity extends AppCompatActivity {
         }
         noPokemonErrorText.setText("");
 
-        Team team = new Team(teamName, pokemon);
+        Team team = new Team(teamName, pokemon, pokedexString);
         // GSON Usage found at - https://stackoverflow.com/questions/7145606/how-do-you-save-store-objects-in-sharedpreferences-on-android
         Gson gson = new Gson();
         String json = gson.toJson(team);
@@ -107,7 +108,12 @@ public class TeamCreationActivity extends AppCompatActivity {
             teamNames += teamName;
         } else {
             teamNames = sharedPref.getString("teamNames", null);
-            teamNames += ", " + teamName;
+            if (teamNames.contains(teamName)) {
+                errorTextView.setText(R.string.teamNameAlreadyInUseError);
+                return;
+            } else {
+                teamNames += ", " + teamName;
+            }
         }
         sharedPrefEditor.putString("teamNames", teamNames).apply();
 

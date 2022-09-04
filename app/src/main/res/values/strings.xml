@@ -48,4 +48,5 @@
     <string name="teamSelectionText">PLEASE SELECT A TEAM TO VIEW</string>
     <string name="teamSelectionButton">POKEDEX SELECTION</string>
     <string name="teamSelectionErrorText">No Teams Created, please make one</string>
+    <string name="teamNameAlreadyInUseError">Team Name already in use</string>
 </resources>

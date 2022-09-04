@@ -25,6 +25,9 @@ public class TeamSelectionActivity extends AppCompatActivity {
             String[] teamNamesArray = teamNames.split(",");
             System.out.println(teamNames);
             System.out.println(teamNamesArray.length);
+
+            // Populate ListView with buttons showing the text of Team Names
+            // StackOverflow to reference - https://stackoverflow.com/questions/40862154/how-to-create-listview-items-button-in-each-row
         }
     }
 }
