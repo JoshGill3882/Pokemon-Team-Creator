@@ -11,12 +11,14 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.pokemonteamcreator.data.Pokemon;
+import com.example.pokemonteamcreator.fragments.InternetIssueDialog;
 
 import org.json.JSONException;
 
@@ -106,6 +108,9 @@ public class PokedexSelectionActivity extends AppCompatActivity {
                 // On a Correct Response
                 response -> {
                     try {
+                        // Alert the user that the pokedex is being gathered
+                        Toast.makeText(context, "POKEDEX LOADING", Toast.LENGTH_LONG).show();
+
                         // For each pokemon in the pokedex
                         for (int i=0; i<response.getJSONArray("pokemon_entries").length(); i++) {
                             String urlSubstring = response
@@ -132,13 +137,14 @@ public class PokedexSelectionActivity extends AppCompatActivity {
                     System.out.println("In MainActivity: " + numOfRequests);
                 },
                 // On an Erroneous Response
-                error -> System.out.println(error.networkResponse)
+                error -> {
+                    DialogFragment dialog = new InternetIssueDialog();
+                    dialog.show(getSupportFragmentManager(), "internetIssue");
+                }
         );
         numOfRequests++;
         // Add the request to the queue
         requestQueue.add(pokedexRequest);
-        // Alert the user that the pokedex is being gathered
-        Toast.makeText(context, "POKEDEX LOADING", Toast.LENGTH_LONG).show();
     }
 
     public static void launchTeamSelector() {
