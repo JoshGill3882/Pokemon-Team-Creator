@@ -35,9 +35,11 @@
         android:background="@drawable/my_button"
         android:text="@string/teamSelectionButton"
         android:textSize="17sp"
+        android:onClick="launchPokedexSelection"
         app:layout_constraintTop_toBottomOf="@+id/teamSelectionListView"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

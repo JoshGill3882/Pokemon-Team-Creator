@@ -50,4 +50,5 @@
     <string name="teamSelectionErrorText">No Teams Created, please make one</string>
     <string name="teamNameAlreadyInUseError">Team Name already in use</string>
     <string name="internet_connection_issue">No Internet Connection</string>
+    <string name="selectTeam">Select Team</string>
 </resources>
