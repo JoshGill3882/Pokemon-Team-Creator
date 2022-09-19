@@ -1,11 +1,10 @@
-package com.example.pokemonteamcreator;
+package com.example.pokemonteamcreator.activities;
 
-import static com.example.pokemonteamcreator.MainActivity.context;
-import static com.example.pokemonteamcreator.MainActivity.sharedPref;
-import static com.example.pokemonteamcreator.PokedexSelectionActivity.pokedexString;
+import static com.example.pokemonteamcreator.activities.MainActivity.context;
+import static com.example.pokemonteamcreator.activities.MainActivity.sharedPref;
+import static com.example.pokemonteamcreator.activities.PokedexSelectionActivity.pokedexString;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -18,6 +17,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentContainerView;
 
+import com.example.pokemonteamcreator.R;
 import com.example.pokemonteamcreator.data.Pokemon;
 import com.example.pokemonteamcreator.data.Team;
 import com.example.pokemonteamcreator.fragments.PokemonSelectionFragment;

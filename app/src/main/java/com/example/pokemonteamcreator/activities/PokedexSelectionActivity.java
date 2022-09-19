@@ -1,10 +1,9 @@
-package com.example.pokemonteamcreator;
+package com.example.pokemonteamcreator.activities;
 
-import static com.example.pokemonteamcreator.MainActivity.context;
-import static com.example.pokemonteamcreator.MainActivity.requestQueue;
+import static com.example.pokemonteamcreator.activities.MainActivity.context;
+import static com.example.pokemonteamcreator.activities.MainActivity.requestQueue;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,9 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
+import com.example.pokemonteamcreator.R;
 import com.example.pokemonteamcreator.data.Pokemon;
 import com.example.pokemonteamcreator.fragments.InternetIssueDialog;
 

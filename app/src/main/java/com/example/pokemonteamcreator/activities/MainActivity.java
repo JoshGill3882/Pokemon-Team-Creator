@@ -1,4 +1,4 @@
-package com.example.pokemonteamcreator;
+package com.example.pokemonteamcreator.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.example.pokemonteamcreator.R;
 
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue requestQueue;

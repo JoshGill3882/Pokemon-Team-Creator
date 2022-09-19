@@ -1,6 +1,6 @@
 package com.example.pokemonteamcreator.fragments;
 
-import static com.example.pokemonteamcreator.PokedexSelectionActivity.selectPokemon;
+import static com.example.pokemonteamcreator.activities.PokedexSelectionActivity.selectPokemon;
 
 import android.os.Bundle;
 import android.view.KeyEvent;

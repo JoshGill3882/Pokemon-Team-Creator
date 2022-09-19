@@ -1,18 +1,18 @@
-package com.example.pokemonteamcreator;
+package com.example.pokemonteamcreator.activities;
 
-import static com.example.pokemonteamcreator.MainActivity.context;
-import static com.example.pokemonteamcreator.MainActivity.sharedPref;
+import static com.example.pokemonteamcreator.activities.MainActivity.context;
+import static com.example.pokemonteamcreator.activities.MainActivity.sharedPref;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.pokemonteamcreator.R;
+import com.example.pokemonteamcreator.activities.PokedexSelectionActivity;
 import com.example.pokemonteamcreator.adapters.TeamViewAdapter;
 
 import java.util.ArrayList;

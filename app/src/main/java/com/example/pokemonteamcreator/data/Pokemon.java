@@ -1,8 +1,8 @@
 package com.example.pokemonteamcreator.data;
 
-import static com.example.pokemonteamcreator.MainActivity.requestQueue;
-import static com.example.pokemonteamcreator.PokedexSelectionActivity.launchTeamSelector;
-import static com.example.pokemonteamcreator.PokedexSelectionActivity.numOfRequests;
+import static com.example.pokemonteamcreator.activities.MainActivity.requestQueue;
+import static com.example.pokemonteamcreator.activities.PokedexSelectionActivity.launchTeamSelector;
+import static com.example.pokemonteamcreator.activities.PokedexSelectionActivity.numOfRequests;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
