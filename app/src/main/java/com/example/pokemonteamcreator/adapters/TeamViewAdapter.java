@@ -1,6 +1,10 @@
 package com.example.pokemonteamcreator.adapters;
 
+import static com.example.pokemonteamcreator.activities.MainActivity.sharedPref;
+import static com.example.pokemonteamcreator.activities.MainActivity.teamSelected;
+
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +14,11 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.example.pokemonteamcreator.R;
+import com.example.pokemonteamcreator.data.Team;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TeamViewAdapter extends BaseAdapter implements ListAdapter {
     private final ArrayList<String> teamList;
@@ -50,7 +57,10 @@ public class TeamViewAdapter extends BaseAdapter implements ListAdapter {
         // Handle button presses
         Button selectTeamButton = view.findViewById(R.id.teamSelectionListItemButton);
         selectTeamButton.setOnClickListener(v -> {
-            System.out.println("Button pressed for Team: " + teamName.getText());
+            String teamJson = sharedPref.getString((String) teamName.getText(), null);
+            teamSelected = new Gson().fromJson(teamJson, Team.class);
+            System.out.println("Object 'teamName' attribute: " + teamSelected.getTeamName());
+            System.out.println("Object Pokemon:" + Arrays.toString(teamSelected.getPokemon()));
         });
 
         return view;

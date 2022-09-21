@@ -12,12 +12,14 @@ import android.view.View;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.example.pokemonteamcreator.R;
+import com.example.pokemonteamcreator.data.Team;
 
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue requestQueue;
     @SuppressLint("StaticFieldLeak")
     public static Context context;
     public static SharedPreferences sharedPref;
+    public static Team teamSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
